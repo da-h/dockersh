@@ -212,6 +212,7 @@ if len(containers(container_filter=args.name)) == 0:
 
     host_config = cli.create_host_config(
         binds=binds,
+        ipc_mode="host",
         restart_policy={'Name' : 'unless-stopped'})
 
     #cli.pull(args.image)
